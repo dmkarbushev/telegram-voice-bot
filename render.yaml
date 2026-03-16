@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: telegram-voice-bot
+    runtime: python
+    repo: https://github.com/dmkarbushev/telegram-voice-bot
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    pythonVersion: 3.11.0  # Эта строка фиксирует версию Python
+    envVars:
+      - key: TELEGRAM_TOKEN
+        sync: false
